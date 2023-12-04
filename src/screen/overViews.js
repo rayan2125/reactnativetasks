@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, FlatList, StyleSheet, Text, ScrollView } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const OverViews = () => {
-    // Sample data for FlatList
+
     const data = [
         { id: '1', title: ' 2', name: "Protected Children", type: "Change protection" },
         { id: '2', title: ' 1', name: "Pending Request", type: "See Detals" },
@@ -31,11 +31,11 @@ const OverViews = () => {
     const renderItem = ({ item }) => (
 
         <View style={styles.item}>
-            <View style={{ height: 50, width: 50, borderRadius: 99, backgroundColor: "#E1EFFA", justifyContent: "center", alignItems: "center" }}>
-                <Icon name={item.id === "1" ? "users" :
-                    item.id === "2" ? "code-pull-request" :
+            <View style={{ height: 50, width: 50, borderRadius: 99, backgroundColor: "#E1EFFA", justifyContent: "center", alignItems: "center",padding:5 }}>
+                <MaterialCommunityIcons name={item.id === "1" ? "account-multiple" :
+                    item.id === "2" ? "source-pull" :
                         item.id === "3" ? "credit-card" :
-                            item.id === "4" ? "laptop" : ""
+                            item.id === "4" ? "devices" : ""
                 } size={20} color="#0098DB" />
 
             </View>
@@ -79,9 +79,10 @@ const OverViews = () => {
 
 const styles = StyleSheet.create({
     item: {
-
+// backgroundColor:"red",
+top:15,
         marginBottom: 30,
-        padding: 20,
+        padding:2,
         marginVertical: 8,
         marginHorizontal: 16,
         flex: 1,

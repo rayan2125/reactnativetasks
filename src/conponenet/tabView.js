@@ -4,6 +4,8 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import OverViews from '../screen/overViews';
 import History from '../screen/history';
 import Member from '../screen/member';
+import Devices from '../screen/devices';
+import Payment from '../screen/payment';
 
 
 
@@ -17,13 +19,13 @@ const SecondRoute = () => (
     <Member />
 );
 const ThirdRoute = ({ }) => (
-    <OverViews />
+    <Devices />
 );
 
 
 const ForthRoute = () => (
 
-    <History />
+    <Payment/>
 );
 const getTabStyle = (index, currentIndex) => {
 

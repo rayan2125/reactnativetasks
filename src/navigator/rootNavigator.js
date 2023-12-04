@@ -6,6 +6,7 @@ import History from '../screen/history';
 import Locations from '../screen/locations';
 import Dashboard from '../screen/dashboard';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -45,7 +46,7 @@ export const Bottom = () => {
                 component={Locations}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Icon name='map-marker' size={size} color={color} />
+                        <Icon name='map-pin' size={size} color={color} />
                     ),
                 }}
             />
@@ -54,7 +55,7 @@ export const Bottom = () => {
                 component={History}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Icon name='clock' size={size} color={color} />
+                        <MaterialCommunityIcons name='history' size={30} color={color} />
                     ),
 
                     tabBarBadge: true,
@@ -77,7 +78,8 @@ export const Bottom = () => {
                 component={Dashboard}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Icon name='ellipsis-vertical' size={size} color={color} />
+                        <MaterialCommunityIcons name="dots-vertical" size={30} color="black" />
+    
                     ),
                 }}
             />
